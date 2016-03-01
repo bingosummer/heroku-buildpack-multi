@@ -47,6 +47,7 @@ for BUILDPACK in $(cat $1/.buildpacks); do
     # we'll get errors later if these are needed and don't exist
     chmod -f +x $dir/bin/{detect,compile,release} || true
 
+    echo "2.5"
     framework=$($dir/bin/detect $1)
 
     echo "3"
